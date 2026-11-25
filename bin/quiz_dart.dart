@@ -1,5 +1,4 @@
-import 'package:quiz_dart/quiz_dart.dart' as quiz_dart;
-
 void main(List<String> arguments) {
-  print('Hello world: ${quiz_dart.calculate()}!');
+  // Ponto de entrada do Quiz de Programação e Dart.
+  // A lógica de execução do quiz será implementada no Dia 2.
 }
