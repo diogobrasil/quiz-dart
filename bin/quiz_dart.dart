@@ -1,8 +1,8 @@
 import 'package:quiz_dart/perguntas.dart';
+import 'package:quiz_dart/quiz.dart';
 
 void main(List<String> arguments) {
   const int pontosPorAcerto = 10;
-  const letras = ['A', 'B', 'C', 'D'];
 
   print('==========================================');
   print('  QUIZ DE PROGRAMAÇÃO E DART');
@@ -20,8 +20,11 @@ void main(List<String> arguments) {
 
     // Exibe as 4 opções com as letras A, B, C e D.
     for (int j = 0; j < opcoes.length; j++) {
-      print('  ${letras[j]}) ${opcoes[j]}');
+      print('  ${letrasAlternativas[j]}) ${opcoes[j]}');
     }
-    print('');
+
+    // Lê a resposta e só aceita A, B, C ou D (maiúscula ou minúscula).
+    final int escolha = lerResposta();
+    print('Resposta registrada: ${letrasAlternativas[escolha]}\n');
   }
 }
