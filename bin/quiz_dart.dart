@@ -38,5 +38,11 @@ void main(List<String> arguments) {
     }
   }
 
-  print('Pontuação acumulada: $pontuacao pontos.');
+  // Resultado final.
+  final int pontuacaoMaxima = perguntas.length * pontosPorAcerto;
+  print('==========================================');
+  print('  FIM DO QUIZ!');
+  print('  Sua pontuação total: $pontuacao de $pontuacaoMaxima pontos.');
+  print('  ${mensagemFinal(pontuacao, pontuacaoMaxima)}');
+  print('==========================================');
 }

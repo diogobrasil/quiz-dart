@@ -26,3 +26,17 @@ int lerResposta() {
     print('Opção inválida. Digite A, B, C ou D.');
   }
 }
+
+/// Mensagem personalizada de acordo com o desempenho do usuário.
+String mensagemFinal(int pontuacao, int pontuacaoMaxima) {
+  final double percentual = pontuacao / pontuacaoMaxima;
+  if (percentual == 1.0) {
+    return 'Parabéns! Você acertou todas as perguntas!';
+  } else if (percentual >= 0.6) {
+    return 'Muito bem! Você tem um bom conhecimento de Dart. Continue praticando!';
+  } else if (percentual >= 0.4) {
+    return 'Bom começo! Revise os conceitos e tente novamente.';
+  } else {
+    return 'Continue praticando para melhorar!';
+  }
+}
