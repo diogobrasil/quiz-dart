@@ -2,7 +2,7 @@ import 'package:quiz_dart/perguntas.dart';
 import 'package:quiz_dart/quiz.dart';
 
 void main(List<String> arguments) {
-  const int pontosPorAcerto = 10;
+  int pontuacao = 0;
 
   print('==========================================');
   print('  QUIZ DE PROGRAMAÇÃO E DART');
@@ -15,6 +15,7 @@ void main(List<String> arguments) {
   for (int i = 0; i < perguntas.length; i++) {
     final pergunta = perguntas[i];
     final List<String> opcoes = pergunta['opcoes'];
+    final int correta = pergunta['correta'];
 
     print('Pergunta ${i + 1}: ${pergunta['pergunta']}');
 
@@ -25,6 +26,17 @@ void main(List<String> arguments) {
 
     // Lê a resposta e só aceita A, B, C ou D (maiúscula ou minúscula).
     final int escolha = lerResposta();
-    print('Resposta registrada: ${letrasAlternativas[escolha]}\n');
+
+    // Estrutura condicional: valida a resposta e atualiza a pontuação.
+    if (escolha == correta) {
+      pontuacao += pontosPorAcerto;
+      print('Correta! +$pontosPorAcerto pontos.\n');
+    } else {
+      print(
+        'Errada! A resposta correta é ${letrasAlternativas[correta]}) ${opcoes[correta]}.\n',
+      );
+    }
   }
+
+  print('Pontuação acumulada: $pontuacao pontos.');
 }

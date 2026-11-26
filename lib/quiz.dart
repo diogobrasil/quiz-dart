@@ -3,6 +3,9 @@ import 'dart:io';
 /// Letras válidas para as alternativas do quiz.
 const List<String> letrasAlternativas = ['A', 'B', 'C', 'D'];
 
+/// Pontuação atribuída a cada resposta correta.
+const int pontosPorAcerto = 10;
+
 /// Lê a resposta do usuário e repete a pergunta até receber
 /// uma letra válida (A, B, C ou D). Retorna o índice da opção.
 int lerResposta() {
