@@ -69,6 +69,10 @@ quiz_dart/
 7. Qual é a saída de `print(10 % 3);` em Dart?
 8. Qual das opções abaixo é uma estrutura condicional em Dart?
 
+## Exemplo de execução
+
+![Print da execução do Quiz de Programação e Dart](print_execucao_quiz.png)
+
 ## Uso de IA
 
 Usei um assistente de IA como apoio na estruturação do projeto e em sugestões de código. O planejamento, o tema, as perguntas, as decisões de implementação e os testes foram feitos por mim.
